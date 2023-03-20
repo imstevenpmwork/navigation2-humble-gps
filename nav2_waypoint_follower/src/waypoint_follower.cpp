@@ -86,7 +86,7 @@ WaypointFollower::on_configure(const rclcpp_lifecycle::State & /*state*/)
   from_ll_to_map_client_ = std::make_unique<
     nav2_util::ServiceClient<robot_localization::srv::FromLL,
     std::shared_ptr<nav2_util::LifecycleNode>>>(
-    "/fromLL",
+    "/FrontLeftCamera/zed_node/fromLL",
     node);
 
   gps_action_server_ = std::make_unique<ActionServerGPS>(
